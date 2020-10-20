@@ -1,15 +1,13 @@
-# gaussian-tools
-1. RDKitSdf2Gau.py   convert MDL SDF file (single molecule) to Gaussian input file 
-Usage:
-python RDKitSdf2Gau.py -h
+<h2>gaussian-tools</h2>
+<ol>
+<li>RDKitSdf2Gau.py</li>   
+<p>convert MDL SDF file (single molecule) to Gaussian input file </p>
 
-2. g2slurm.py        Generate SLURM queue script for Gaussian input file
-Usage:
-python g2slurm.py -h
+<li>g2slurm.py</li>
+<p>Generate SLURM queue script for Gaussian input file</p>
 
+<li>G16Scan2CONF.py</li>
+<p>Extract conformer from scan task output file</p>
+<p>For each conformer, a torsion-fixed optimization Gaussian input file will be generated.</p>
 
-3. G16Scan2CONF.py  Extract conformer from scan task output file
-Usage:
-python G16Scan2CONF.py -h
-
-For each conformer, a torsion-fixed optimization Gaussian input file will be generated.
+</ol>
