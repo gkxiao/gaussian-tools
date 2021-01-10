@@ -1,4 +1,5 @@
 #!/bin/python
+# -*- coding: utf-8 -*-
 import sys,string,argparse
 from optparse import OptionParser
 parser = argparse.ArgumentParser(description="Extract conformer from Gaussian torsion scan")
@@ -24,6 +25,22 @@ for i in range(len(gout)):
         charge = gout[i+1].split()[2]
         Multiplicity = gout[i+1].split()[5]
 
+# atom number 2 element
+def GetAtomSymbol(AtomNum):
+    Lookup = ['H', 'He', 'Li', 'Be', 'B', 'C', 'N', 'O', 'F', 'Ne', 'Na', 'Mg', 'Al', \
+              'Si', 'P', 'S', 'Cl', 'Ar', 'K', 'Ca', 'Sc', 'Ti', 'V', 'Cr', 'Mn', 'Fe', 'Co', \
+              'Ni', 'Cu', 'Zn', 'Ga', 'Ge', 'As', 'Se', 'Br', 'Kr', 'Rb', 'Sr', 'Y', 'Zr', \
+              'Nb', 'Mo', 'Tc', 'Ru', 'Rh', 'Pd', 'Ag', 'Cd', 'In', 'Sn', 'Sb', 'Te', 'I', \
+              'Xe', 'Cs', 'Ba', 'La', 'Ce', 'Pr', 'Nd', 'Pm', 'Sm', 'Eu', 'Gd', 'Tb', 'Dy', \
+              'Ho', 'Er', 'Tm', 'Yb', 'Lu', 'Hf', 'Ta', 'W', 'Re', 'Os', 'Ir', 'Pt', 'Au', \
+              'Hg', 'Tl', 'Pb', 'Bi', 'Po', 'At', 'Rn']
+
+    if AtomNum > 0 and AtomNum < len(Lookup):
+        return Lookup[AtomNum-1]
+    else:
+        print("No such element with atomic number " + str(AtomNum))
+        return 0
+        
 #提取Dihedral
 line_atom_end = 0
 for i in range(len(gout)):
@@ -68,6 +85,7 @@ for n in range(len(ConfIndex)):
     ofile.write(str(charge)+' '+str(Multiplicity)+'\n')
     for i in range(int(no_atom)):
         gid,atom,no,x,y,z=CONF[index][i].split()
+        atom = GetAtomSymbol(int(atom))
         ofile.write(atom+' '+x+' '+y+' '+z+'\n')
     ofile.write('\n')
     ofile.write(AddInp+'\n')
