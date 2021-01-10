@@ -96,6 +96,8 @@ for n in range(len(ConfIndex)):
     slurmout.write('#SBATCH -e CONF_'+str(id)+'_err.%j\n')
     slurmout.write('cd  $SLURM_SUBMIT_DIR\n')
     slurmout.write('source ~/bin/g16_env.sh\n')
+    slurmout.write('GAUSS_SCRDIR=`mktemp -d ./gauss.XXXXX`\n')
+    slurmout.write('export GAUSS_SCRDIR\n')
     slurmout.write('$g16root/g16/g16 -p=16 -m=12GB CONF_'+str(id)+'.gjf\n')
 ofile.close
 slurmout.close
