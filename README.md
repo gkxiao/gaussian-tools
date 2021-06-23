@@ -14,4 +14,9 @@ python G16Scan2CONF.py foo.log
 </pre>
 <p>For each conformer, a Gaussian input file for torsion-fixed optimization will be generated.</p>
 
+<li>torsionreport.py</li>
+<p>extract dihedral angle and energy from dihedral scan calculation.
+ 
+<li>tddft2specdis.py</li>
+<p>The script can be use to extract heat and ecd spectra from Gaussian 09/16 output file. SpecDis software can be use to read the heat and spectra and  to plot ECD specta.</p>   
 </ol>
