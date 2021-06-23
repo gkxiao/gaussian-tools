@@ -18,5 +18,5 @@ python G16Scan2CONF.py foo.log
 <p>extract dihedral angle and energy from dihedral scan calculation.
  
 <li>tddft2specdis.py</li>
-<p>The script can be use to extract heat and ecd spectra from Gaussian 09/16 output file. SpecDis software can be use to read the heat and spectra and  to plot ECD specta.</p>   
+<p>The script can be use to extract heat and ecd spectra from Gaussian 09/16 output file. And SpecDis software can read the heat and spectra to plot ECD spectra.</p>   
 </ol>
