@@ -4,8 +4,8 @@
 <li>RDKitSdf2Gau.py</li>   
 <p>convert MDL SDF file (single molecule) into Gaussian input file </p>
 
-<li>g2slurm.py</li>
-<p>Generate SLURM script for Gaussian input file</p>
+<li>g2slurm.py/g2pbs.py</li>
+<p>Generate SLURM/PBS script for Gaussian input file</p>
 
 <li>G16Scan2CONF.py</li>
 <p>Extract conformer from Gaussian scan output file</p>
