@@ -20,7 +20,7 @@ python G16Scan2CONF.py foo.log
 <li>RDKitSDF2GaussOptInSolvent.py</li>
 <p>Generate Opt & Freq calculation input file:.</p>
 <pre line="1" lang="python">
-RDKitSDF2GaussOptInSolvent.py CONF_01.sdf CONF_01_opt_freq.com 'APFD/6-311+g(2d,p)' methanol
+RDKitSDF2GaussOptInSolvent.py CONF_01.sdf CONF_01.com 'APFD/6-311+g(2d,p)' Methanol
 </pre>
 
 <li>Chk2ECD.py</li>
